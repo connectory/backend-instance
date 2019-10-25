@@ -19,7 +19,8 @@ provider "aws" {
 }
 
 module "example" {
-  source = "../"
+  source = "github.com/connectory/backend-instance?ref=v0.1.0"
+
   name = "foo"
 
   #overwrite default values 
