@@ -29,3 +29,7 @@ module "example" {
   cidr_block = "10.255.0.0/16"
 }
 ```
+
+## AWS Session manager
+
+See https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html
