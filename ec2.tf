@@ -1,5 +1,5 @@
 resource "aws_instance" "this" {
-  ami                  = data.aws_ami.ubuntu.image_id
+  ami                  = data.aws_ami.this.image_id
   instance_type        = var.instance_type
   subnet_id            = module.vpc.private_subnets[0]
   iam_instance_profile = "${aws_iam_instance_profile.this.name}"
@@ -9,7 +9,7 @@ resource "aws_instance" "this" {
   }
 }
 
-data "aws_ami" "ubuntu" {
+data "aws_ami" "this" {
   most_recent = true
 
   filter {
